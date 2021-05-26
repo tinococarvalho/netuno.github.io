@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css">
         
-		<script src="https://dfilittobot.herokuapp.com/assets/modules/channel-web/inject.js"></script>
+		<script src="https://rocky-bastion-14309.herokuapp.com/assets/modules/channel-web/inject.js"></script></head>
     </head>
     <body>
         <header>
@@ -53,4 +53,19 @@
             </article>
         </main>
     </body>
+<script>
+    window.botpressWebChat.init({
+      host: 'https://rocky-bastion-14309.herokuapp.com/',
+      botId: 'netuno_bot'})	
+        setTimeout(function(){
+          window.botpressWebChat.sendEvent({type:"session_reset"})
+        },1000)
+  setTimeout(function(){
+    window.botpressWebChat.sendEvent({
+      type:'proactive-trigger',
+      channel: 'web',
+      payload: { text:'Hello'}
+                                     })
+  },1000)
+  </script>
 </html>
